@@ -2,12 +2,13 @@
 import Rectangle from '../Rectangle';
 import styles from './index.module.scss'
 
-const CustomMarker = ({ imageUrl, location, center, name, lat, lng }) => {
+const CustomMarker = ({ imageUrl, name, lat, lng }) => {
 
   const onMarkerClick = () => {
     const directionsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
     window.open(directionsUrl, '_blank');
   };
+
   return (
     <div
       onClick={onMarkerClick}
