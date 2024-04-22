@@ -1,0 +1,64 @@
+@font-face {
+  font-family: "Swiss"; /* Choose a name for your font */
+  src: local("swiss"), url("./SuisseIntl-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Swiss" !important;
+  transition: all 0.3s ease-in;
+}
+.check-container {
+  position: absolute;
+  z-index: 10000;
+  /* inset: 3rem; */
+  top: 2rem;
+  right: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: #e2e2e2;
+}
+.checkBoxes-con {
+  width: 250px;
+  height: fit-content;
+}
+.check-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+* {
+  transition: all 0.2s ease;
+}
+
+.markCheckCon {
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  background: #f1f1f1;
+  flex-direction: column;
+  height: 250px;
+  overflow-y: scroll;
+}
+.markCheck {
+  width: 100%;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+.markCheck:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.markCheck:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.markCheck label {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}

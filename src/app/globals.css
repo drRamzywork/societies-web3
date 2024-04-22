@@ -105,3 +105,503 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Add these styles at the end of your existing CSS file */
+
+.map-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.clouds-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.cloud {
+  position: absolute;
+  top: 15%;
+  animation-duration: 50s; /* Adjust the duration as needed */
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.cloud-1 {
+  left: -50%;
+  animation-name: move-cloud-1;
+  animation-delay: 0s; /* Adjust the delay for each cloud */
+  top: -25%;
+}
+
+.cloud-2 {
+  left: -70%;
+  animation-name: move-cloud-2;
+  animation-delay: 5s; /* Adjust the delay for each cloud */
+}
+
+.cloud-3 {
+  left: -100%;
+  animation-name: move-cloud-3;
+  animation-delay: 10s; /* Adjust the delay for each cloud */
+}
+
+.cloud-4 {
+  left: -90%;
+  animation-name: move-cloud-4;
+  animation-delay: 15s; /* Adjust the delay for each cloud */
+}
+
+.cloud-5 {
+  left: -85%;
+  animation-name: move-cloud-5;
+  animation-delay: 20s; /* Adjust the delay for each cloud */
+}
+
+@keyframes move-cloud-1 {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move-cloud-2 {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move-cloud-3 {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move-cloud-4 {
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes move-cloud-5 {
+  100% {
+    left: 100%;
+  }
+}
+.mapMark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  width: 40px;
+  height: 35px;
+  background-size: cover;
+}
+.mapOrange {
+  background-color: #fcb270;
+  position: absolute;
+  left: 40px;
+  top: 4.6px;
+  padding: 4px;
+  font-size: 13px;
+  border-radius: 10px;
+  font-weight: bold;
+  width: fit-content;
+  min-width: 7rem;
+  text-align: center;
+  /* filter: blur(19.1684px); */
+  transition: transform 0.1s ease;
+}
+
+.mapOrange:hover {
+  transform: scale(1.1);
+}
+
+.mapMark2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  width: 45px;
+  height: 45px;
+  z-index: 10000;
+}
+.mapMarkFamous {
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  padding: 0.5rem;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  justify-content: center;
+  top: 50%;
+}
+.map_mark_white {
+  position: absolute;
+  /* left: 6px; */
+  /* top: 20px; */
+  width: 15px;
+}
+.marksImgContainer {
+  pointer-events: all;
+  cursor: pointer;
+}
+.svgMarks {
+  transition: opacity 0.3s, transform 0.3s;
+}
+.svgMarks:hover {
+  transform: scale(1.1);
+}
+.text_svg:hover {
+  fill: orange !important;
+}
+
+.distance_duration_info_overlay {
+  /* 
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%); */
+
+  bottom: -13px;
+  right: 5rem;
+  position: absolute;
+  background-color: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 6px;
+  border-radius: 5px;
+  display: flex;
+  font-weight: bold;
+  /* box-shadow: 0 0 10px rgba(50, 55, 60, 0.6); */
+  z-index: 11111111;
+  /* right: 5rem; */
+  width: max-content;
+  align-items: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+.divider {
+  height: 20px;
+  width: 2px;
+  background-color: white;
+  border-radius: 16px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.question_btn {
+  z-index: 1100;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e2e2e2;
+  border-radius: 8px;
+  pointer-events: all;
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+  border: 0;
+  cursor: pointer;
+}
+.compass {
+  display: flex;
+  height: 100%;
+
+  position: absolute;
+  margin-inline-end: 10px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: start;
+  cursor: pointer;
+  transition: 0.3s;
+  right: 1rem;
+  height: 5rem;
+  bottom: 2rem;
+}
+.compass_wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.compass_circle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.div_n {
+  font-size: 10px;
+  line-height: 100%;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  top: -15px;
+  position: absolute;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.compass_arrow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 46px;
+  height: 46px;
+  border-radius: 100%;
+  background-color: rgba(35, 35, 35, 0.5);
+  transition: var(--transition);
+}
+.compass_arrow::before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0px 4px 24px;
+  border-color: transparent transparent rgb(254, 25, 26);
+}
+.compass_arrow::after {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 24px 4px 0px;
+  border-color: rgb(254, 254, 254) transparent transparent;
+}
+/* .layout_style {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 3;
+  inset: 0;
+} */
+
+/* map marks for each filter  */
+
+.IconMarker {
+  position: relative;
+}
+.RoundedMarkIcon {
+  position: absolute;
+  inset: 0;
+  width: 27px;
+  height: 27px;
+  z-index: 2;
+  position: relative;
+  z-index: 99999;
+}
+.RoundedMarkIcon:not(:is(:hover)) {
+  z-index: 0;
+}
+.markName {
+  z-index: 1;
+  color: white;
+  padding: 6px 8px;
+  border-radius: 25px;
+  border: 1px solid white;
+  left: 40px;
+  position: absolute;
+  opacity: 0;
+  text-wrap: nowrap;
+  min-width: 50px;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  font-size: 24px;
+  font-weight: 500;
+}
+.RoundedMarkIcon:hover + .markName {
+  left: 51px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.societie {
+  position: relative;
+  width: fit-content;
+
+  .name {
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: -10px;
+    background-color: #fefefefe;
+    padding: 5px;
+    border-radius: 16px;
+    display: flex;
+    /* opacity: 0; */
+
+    p {
+      margin: auto;
+      font-size: 16px;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+  }
+
+  .icon_container {
+    img {
+      /* transform: rotate(180deg); */
+    }
+  }
+
+  .RoundedMarkIcon {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    border: 1px solid #e2e2e2;
+    position: relative;
+    z-index: 99999;
+
+    svg {
+      margin: auto;
+    }
+  }
+
+  .markName {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+.societie .name:hover {
+  transform: scale(1.5);
+}
+
+.heartbeat::before {
+  content: "";
+  position: absolute;
+  /* top: 50%; */
+  bottom: -29px;
+  left: 0px;
+  border: 3px solid rgb(222, 9, 9);
+  border-radius: 50%; /* Makes it round */
+  animation: expandLine infinite 1s ease-in-out; /* Animation for active bullet */
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes expandLine {
+  0% {
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+  25% {
+    width: 24px;
+    height: 24px;
+    opacity: 0.3;
+  }
+  75% {
+    width: 24px;
+    height: 24px;
+
+    opacity: 0.3;
+  }
+  100% {
+    width: 0;
+    height: 0;
+
+    opacity: 0;
+  }
+}
+
+@font-face {
+  font-family: "Swiss"; /* Choose a name for your font */
+  src: local("swiss"), url("/SuisseIntl-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Swiss" !important;
+}
+
+.check-container {
+  position: absolute;
+  z-index: 10000;
+  /* inset: 3rem; */
+  top: 2rem;
+  /* right: 1.5rem; */
+  right: 7.5rem;
+  padding: 16px;
+  border-radius: 1rem;
+  background: #bbbbbb;
+}
+.checkBoxes-con {
+  width: 250px;
+  height: fit-content;
+}
+.check-container h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.markCheckCon {
+  border-radius: 0.5rem;
+  width: 100%;
+  display: flex;
+  background: #666666;
+  flex-direction: column;
+  height: 250px;
+  overflow-y: scroll;
+}
+.markCheck {
+  width: 100%;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  font-weight: 600;
+  transition: all 0.2s ease-in;
+}
+.markCheck:first-child {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+.markCheck:last-child {
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.markCheck label {
+  width: 100%;
+  padding: 0.5rem;
+  display: flex;
+  cursor: pointer;
+  justify-content: space-between;
+  align-items: center;
+}
