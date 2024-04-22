@@ -128,6 +128,7 @@ const CheckBox = ({ societiesListSocieties, selectedSocietiesData,
               >
                 <label htmlFor={`show-${index}`} style={{ width: "100%" }}>
                   <span>{society.name}</span>
+
                   <span style={{ width: "23px", height: "23px" }}>
                     <svg
                       viewBox="0 0 18 17"
@@ -144,6 +145,7 @@ const CheckBox = ({ societiesListSocieties, selectedSocietiesData,
                       ></path>
                     </svg>
                   </span>
+
                 </label>
               </div>
             ))}

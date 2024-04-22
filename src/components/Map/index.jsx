@@ -68,7 +68,7 @@ const Map = ({ societiesListSocieties }) => {
 
   if (!isLoaded) return <div>Loading Maps...</div>;
 
-  console.log(zoomLevel, "zoomLevel")
+  console.log(mapCenter, "zoomLevel")
   console.log(selectedSocietiesData.l, "zoomLevel")
 
   return (
@@ -96,7 +96,7 @@ const Map = ({ societiesListSocieties }) => {
               >
                 <div className="societie">
                   <div className="RoundedMarkIcon">
-                    <CustomMarker center={center} imageUrl={'/place.jpeg'} />
+                    <CustomMarker center={center} lat={society.lat} lng={society.long} imageUrl={'/place.jpeg'} />
                   </div>
                   <div className="markName">
                     <p>{society.name}</p>
